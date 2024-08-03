@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Expense Tracker</h1>
+
+    <main>
+      <header>
+        <div>
+          <h5>Total Balance</h5>
+          <span id="balance">$0.00</span>
+        </div>
+        <div>
+          <h5>Income</h5>
+          <span id="income">$0.00</span>
+        </div>
+        <div>
+          <h5>Expense</h5>
+          <span id="expense">$0.00</span>
+        </div>
+      </header>
+
+      <section>
+        <h3>Transactions</h3>
+        <ul id="transactionList"></ul>
+        <div id="status"></div>
+      </section>
+
+
+      
+      <section>
+        <h3>Add Transaction</h3>
+
+        <form id="transactionForm">
+          <div>
+            <label for="type">
+              <input type="checkbox" name="type" id="type" />
+              <div class="option">
+                <span>Expense</span>
+                <span>Income</span>
+              </div>
+            </label>
+          </div>
+          <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" required />
+          </div>
+          <div>
+            <label for="amount">Amount</label>
+            <input
+              type="number"
+              name="amount"
+              value="0"
+              min="0.01"
+              step="0.01"
+              required
+            />
+          </div>
+          
+          <div>
+            <label for="date">Date</label>
+            <input type="date" name="date" required />
+          </div>
+          
+          <div>
+            <label for="category">Category</label>
+            <select name="category" id="category" required>
+              <option value="">Select Category</option>
+              <option value="travel">Travel</option>
+              <option value="misc">Miscellaneous</option>
+              <option value="education">Education</option>
+              <option value="entertainment">Entertainment</option>
+              <option value="food">Food</option>
+              <option value="health">Health</option>
+            </select>
+          </div>
+        
+          <button type="submit">Submit</button>
+          <button type="graph">View Data</button>
+        </form>
+      </section>
+      <footer style="text-align: center; margin-top: 1rem; font-size: 0.75rem; padding: 0.5rem 0; font-family: 'Poppins', sans-serif; font-weight: 600;">
+        DEVELOPED BY BADBUNNY21, COSMIC, JERRY NOT GERRY & T
+      </footer>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
